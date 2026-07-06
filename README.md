@@ -180,6 +180,20 @@ Boundary: this is single-reviewer blind preference evidence. It is not provider-
 
 ## Quick Start
 
+Install the skill globally for Codex first:
+
+```bash
+npx -y skills add yaojingang/yao-meta-skill -a codex -g -y
+```
+
+To install it for every supported agent, replace `-a codex` with `-a '*'`:
+
+```bash
+npx -y skills add yaojingang/yao-meta-skill -a '*' -g -y
+```
+
+After installation, restart the client. Then ask for tasks such as "create a skill from this workflow", "improve this existing skill", "evaluate this skill", or "add evals to this skill" to trigger `yao-meta-skill`.
+
 1. Describe the workflow, prompt set, or repeated task you want to turn into a skill.
 2. Start with a short, human intent dialogue so the real job, outputs, exclusions, constraints, and standards are explicit.
 3. Let `quickstart` clarify intent first, then run silent benchmark scan and reference synthesis; it only surfaces explicit questions when intent is still unclear or when there is a real design conflict.

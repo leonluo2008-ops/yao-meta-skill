@@ -160,6 +160,20 @@ flowchart LR
 
 ## 快速开始
 
+如果你想直接在 Codex 里使用这个 skill，先安装到全局 skills：
+
+```bash
+npx -y skills add yaojingang/yao-meta-skill -a codex -g -y
+```
+
+如果要安装到全部支持的 agent，把 `-a codex` 换成 `-a '*'`：
+
+```bash
+npx -y skills add yaojingang/yao-meta-skill -a '*' -g -y
+```
+
+安装完成后重启客户端，再用“创建 skill”“改进已有 skill”“评估 skill”“给 skill 增加 eval”这类任务触发 `yao-meta-skill`。
+
 1. 先描述你想沉淀成 skill 的 workflow、prompt 集合或重复任务。
 2. 先做一轮简短但更有人味的意图对话，把真实任务、输出物、边界、约束和你在意的质量标准说清楚。
 3. 先让 `quickstart` 澄清意图，再静默跑 benchmark scan 和 reference synthesis；只有当意图还不清楚，或者设计路线真的冲突时，才会显式继续追问或让你拍板。
