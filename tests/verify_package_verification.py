@@ -75,17 +75,37 @@ def verify_package(out_dir: Path, output_json: Path, output_md: Path, skill_root
     )
 
 
-def main() -> None:
-    source_skill_entries = []
-    for path in ROOT.rglob("SKILL.md"):
-        relative = path.relative_to(ROOT)
-        if relative.parts[0] in {".git", "dist"}:
+def verify_source_entrypoint_scan() -> None:
+    with tempfile.TemporaryDirectory(prefix="source-entrypoint-scan-") as temp_root:
+        root = Path(temp_root)
+        (root / "SKILL.md").write_text("root\n", encoding="utf-8")
+        (root / "examples" / "demo").mkdir(parents=True)
+        (root / "examples" / "demo" / "SKILL.md").write_text("nested\n", encoding="utf-8")
+        (root / ".agents" / "skills" / "local-helper").mkdir(parents=True)
+        (root / ".agents" / "skills" / "local-helper" / "SKILL.md").write_text("local\n", encoding="utf-8")
+
+        assert source_skill_entries(root) == [
+            Path("SKILL.md"),
+            Path("examples/demo/SKILL.md"),
+        ]
+
+
+def source_skill_entries(root: Path) -> list[Path]:
+    entries = []
+    for path in root.rglob("SKILL.md"):
+        relative = path.relative_to(root)
+        if relative.parts[0] in {".agents", ".git", "dist"}:
             continue
         if len(relative.parts) >= 2 and relative.parts[0] == "tests" and relative.parts[1].startswith("tmp"):
             continue
-        source_skill_entries.append(relative)
-    source_skill_entries.sort()
-    assert source_skill_entries == [Path("SKILL.md")], source_skill_entries
+        entries.append(relative)
+    return sorted(entries)
+
+
+def main() -> None:
+    verify_source_entrypoint_scan()
+    source_entries = source_skill_entries(ROOT)
+    assert source_entries == [Path("SKILL.md")], source_entries
 
     if TMP.exists():
         shutil.rmtree(TMP)

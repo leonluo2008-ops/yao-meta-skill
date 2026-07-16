@@ -1,6 +1,6 @@
 # Prompt Quality Profile
 
-Skill: `yao-meta-skill-trigger-coverage-merge`
+Skill: `yao-meta-skill-pr13-merge`
 Relevance: `prompt-aware`
 Overall quality score: `89.0/100`
 

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "ok": true,
-  "generated_at": "2026-07-02",
+  "generated_at": "2026-07-16",
   "skill_dir": ".",
   "summary": {
     "item_count": 21,
@@ -749,11 +749,11 @@
           "exists": true
         },
         {
-          "path": "reports/skillops/daily/2026-07-02.json",
+          "path": "reports/skillops/daily/2026-07-16.json",
           "exists": true
         },
         {
-          "path": "reports/skillops/daily/2026-07-02.md",
+          "path": "reports/skillops/daily/2026-07-16.md",
           "exists": true
         }
       ],
@@ -776,11 +776,11 @@
           "exists": true
         },
         {
-          "path": "reports/skillops/weekly/2026-W27.json",
+          "path": "reports/skillops/weekly/2026-W29.json",
           "exists": true
         },
         {
-          "path": "reports/skillops/weekly/2026-W27.md",
+          "path": "reports/skillops/weekly/2026-W29.md",
           "exists": true
         }
       ],

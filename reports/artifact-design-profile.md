@@ -1,6 +1,6 @@
 # Artifact Design Profile
 
-Skill: `yao-meta-skill-trigger-coverage-merge`
+Skill: `yao-meta-skill-pr13-merge`
 Design system: `metric editorial`
 
 ## Primary Artifact Direction

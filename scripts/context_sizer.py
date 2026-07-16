@@ -123,7 +123,7 @@ def summarize(skill_dir: Path) -> dict:
         }
         files.append(record)
         total_tokens += tokens
-        if rel == Path("SKILL.md") or (rel.parts and rel.parts[0] == "agents"):
+        if kind == "skill_body" or (rel.parts and rel.parts[0] == "agents"):
             initial_tokens += tokens
     return {
         "skill_dir": str(skill_dir),

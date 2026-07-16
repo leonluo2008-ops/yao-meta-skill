@@ -81,6 +81,14 @@
       "recommendation": "Break broad integration assertions into focused verifier helpers when the next behavior change lands."
     },
     {
+      "path": "scripts/build_skill_atlas.py",
+      "lines": 591,
+      "kind": "cli-script",
+      "severity": "pass",
+      "early_watch": false,
+      "recommendation": "Watch this file before adding new responsibilities; extract a helper module when one concern dominates."
+    },
+    {
       "path": "scripts/render_skill_overview.py",
       "lines": 588,
       "kind": "cli-script",
@@ -95,14 +103,6 @@
       "severity": "pass",
       "early_watch": false,
       "recommendation": "Break broad integration assertions into focused verifier helpers when the next behavior change lands."
-    },
-    {
-      "path": "scripts/build_skill_atlas.py",
-      "lines": 586,
-      "kind": "cli-script",
-      "severity": "pass",
-      "early_watch": false,
-      "recommendation": "Watch this file before adding new responsibilities; extract a helper module when one concern dominates."
     },
     {
       "path": "scripts/optimize_description.py",

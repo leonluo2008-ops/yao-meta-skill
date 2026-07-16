@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
   "ok": true,
-  "generated_at": "2026-07-02",
+  "generated_at": "2026-07-16",
   "skill_dir": ".",
   "summary": {
     "ledger_ready_to_claim_world_class": false,
     "ledger_pending_count": 4,
-    "claim_surface_count": 201,
-    "json_claim_surface_count": 97,
-    "metadata_claim_surface_count": 98,
-    "package_claim_surface_count": 17,
+    "claim_surface_count": 198,
+    "json_claim_surface_count": 94,
+    "metadata_claim_surface_count": 95,
+    "package_claim_surface_count": 10,
     "violation_count": 0,
     "overclaim_guard_active": true,
     "decision": "claim-guard-pass-evidence-pending"
@@ -52,34 +52,6 @@
     },
     {
       "path": "agents/interface.yaml",
-      "violation_count": 0
-    },
-    {
-      "path": "dist/manifest.json",
-      "violation_count": 0
-    },
-    {
-      "path": "dist/targets/claude/README.md",
-      "violation_count": 0
-    },
-    {
-      "path": "dist/targets/claude/adapter.json",
-      "violation_count": 0
-    },
-    {
-      "path": "dist/targets/generic/adapter.json",
-      "violation_count": 0
-    },
-    {
-      "path": "dist/targets/openai/adapter.json",
-      "violation_count": 0
-    },
-    {
-      "path": "dist/targets/vscode/README.md",
-      "violation_count": 0
-    },
-    {
-      "path": "dist/targets/vscode/adapter.json",
       "violation_count": 0
     },
     {
@@ -699,6 +671,14 @@
       "violation_count": 0
     },
     {
+      "path": "reports/skillops/daily/2026-07-16.json",
+      "violation_count": 0
+    },
+    {
+      "path": "reports/skillops/daily/2026-07-16.md",
+      "violation_count": 0
+    },
+    {
       "path": "reports/skillops/weekly/2026-W25.json",
       "violation_count": 0
     },
@@ -712,6 +692,14 @@
     },
     {
       "path": "reports/skillops/weekly/2026-W27.md",
+      "violation_count": 0
+    },
+    {
+      "path": "reports/skillops/weekly/2026-W29.json",
+      "violation_count": 0
+    },
+    {
+      "path": "reports/skillops/weekly/2026-W29.md",
       "violation_count": 0
     },
     {
