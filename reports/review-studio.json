@@ -65,7 +65,7 @@
       "key": "context-budget",
       "label": "上下文",
       "status": "pass",
-      "detail": "initial load 987/1000; deferred 531767/120000; top deferred scripts 469568; resource governance governed; quality density 141.8",
+      "detail": "initial load 987/1000; deferred 531896/120000; top deferred scripts 469693; resource governance governed; quality density 141.8",
       "evidence": "reports/context_budget.json",
       "link": "context_budget.md",
       "review_action_id": "",
@@ -185,7 +185,7 @@
       "key": "operations-loop",
       "label": "运营回路",
       "status": "pass",
-      "detail": "1 metadata events; adoption 100.0; missed 0; bad-output 0; risk low; daily proposals 5; daily decision proposal-review; daily release lock false; weekly queue 5 unique; weekly ready 1; weekly top 88; weekly release lock false",
+      "detail": "1 metadata events; adoption 100.0; missed 0; bad-output 0; risk low; daily proposals 5; daily decision proposal-review; daily release lock true; weekly queue 5 unique; weekly ready 1; weekly top 88; weekly release lock true",
       "evidence": "reports/adoption_drift_report.json + reports/skillops/daily + reports/skillops/weekly",
       "link": "adoption_drift_report.md",
       "review_action_id": "",
@@ -1437,8 +1437,8 @@
     "upgrade_check": "reports/upgrade_check.md",
     "migration": "docs/migration-v2.md",
     "skill_ir": "skill-ir/examples/yao-meta-skill.json",
-    "daily_skillops": "reports/skillops/daily/2026-07-02.md",
-    "weekly_curator": "reports/skillops/weekly/2026-W27.md"
+    "daily_skillops": "reports/skillops/daily/2026-07-16.md",
+    "weekly_curator": "reports/skillops/weekly/2026-W29.md"
   },
   "data": {
     "overview": {
@@ -2454,13 +2454,13 @@
         "ok": true,
         "summary": {
           "reproducibility_ready": true,
-          "release_lock_ready": false,
+          "release_lock_ready": true,
           "methodology_complete": true,
           "required_artifact_count": 25,
           "missing_artifact_count": 0,
-          "evidence_bundle_sha256": "6c95043c2d8513102b37bc70a01647246933c84e8a27c2748cc2cae20e040158",
-          "source_contract_sha256": "db71157184dc649ee72dfcaf399204d44a366d942393d055571e0137d42c9f7c",
-          "archive_sha256": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7",
+          "evidence_bundle_sha256": "c297ab1a774434898a9711dc65a49f422cad5cd90e054b6c84ac7c92ee21f850",
+          "source_contract_sha256": "4a7954098cf0f49eca67f55cd0794fe88a068c7eb3bd0fce2b405a9363e0e3ff",
+          "archive_sha256": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773",
           "output_case_count": 5,
           "failure_disclosure_count": 3,
           "command_count": 23,
@@ -2477,19 +2477,19 @@
           "world_class_source_check_count": 19,
           "world_class_source_pass_count": 12,
           "world_class_source_blocked_count": 7,
-          "beta_test_ready": false,
-          "beta_test_blocker_count": 1,
+          "beta_test_ready": true,
+          "beta_test_blocker_count": 0,
           "beta_test_deferred_evidence_count": 4,
           "public_claim_ready": false,
-          "public_claim_blocker_count": 4,
-          "working_tree_dirty": true,
-          "changed_file_count": 37,
-          "source_tree_dirty": true,
-          "source_changed_file_count": 1,
-          "generated_tree_dirty": true,
-          "generated_changed_file_count": 36
+          "public_claim_blocker_count": 3,
+          "working_tree_dirty": false,
+          "changed_file_count": 0,
+          "source_tree_dirty": false,
+          "source_changed_file_count": 0,
+          "generated_tree_dirty": false,
+          "generated_changed_file_count": 0
         },
-        "commit": "24bea607a2b16e766bc8f2bc8483f22fae1edc61",
+        "commit": "ef0c82e8acf09ee401c6086f59623c3ef1287761",
         "missing_artifacts": [],
         "limitations": [
           "The git commit and dirty flags are generation-time context; release lock is blocked by source changes, while generated evidence artifacts are tracked separately.",
@@ -2595,7 +2595,7 @@
         "interactive_script_count": 0,
         "package_hash_scope": "source-contract-without-generated-reports",
         "package_hash_file_count": 247,
-        "package_sha256": "db71157184dc649ee72dfcaf399204d44a366d942393d055571e0137d42c9f7c"
+        "package_sha256": "4a7954098cf0f49eca67f55cd0794fe88a068c7eb3bd0fce2b405a9363e0e3ff"
       },
       "skill_atlas": {
         "skill_count": 11,
@@ -2633,8 +2633,8 @@
           "trust_level": "local",
           "license": "MIT",
           "checksums": {
-            "package_sha256": "db71157184dc649ee72dfcaf399204d44a366d942393d055571e0137d42c9f7c",
-            "archive_sha256": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7"
+            "package_sha256": "4a7954098cf0f49eca67f55cd0794fe88a068c7eb3bd0fce2b405a9363e0e3ff",
+            "archive_sha256": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773"
           },
           "compatibility": {
             "openai": "pass",
@@ -2665,12 +2665,12 @@
           },
           "distribution": {
             "archive_verified": true,
-            "archive_sha256": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7",
+            "archive_sha256": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773",
             "package_verification": "reports/package_verification.json",
             "install_simulated": true,
             "install_simulation": "reports/install_simulation.json"
           },
-          "generated_at": "2026-06-13"
+          "generated_at": "2026-07-16"
         },
         "failures": [],
         "warnings": []
@@ -2681,8 +2681,8 @@
           "target_count": 4,
           "adapter_count": 4,
           "archive_present": true,
-          "archive_sha256": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7",
-          "archive_entry_count": 580,
+          "archive_sha256": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773",
+          "archive_entry_count": 612,
           "nested_skill_entry_count": 0,
           "failure_count": 0,
           "warning_count": 0
@@ -2694,7 +2694,7 @@
         "ok": true,
         "summary": {
           "archive_present": true,
-          "archive_entry_count": 598,
+          "archive_entry_count": 612,
           "nested_skill_entry_count": 0,
           "archive_extracted": true,
           "entrypoint_loaded": true,
@@ -2762,12 +2762,12 @@
             {
               "field": "archive_sha256",
               "from": "",
-              "to": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7"
+              "to": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773"
             },
             {
               "field": "package_sha256",
               "from": "0000000000000000000000000000000000000000000000000000000000000000",
-              "to": "db71157184dc649ee72dfcaf399204d44a366d942393d055571e0137d42c9f7c"
+              "to": "4a7954098cf0f49eca67f55cd0794fe88a068c7eb3bd0fce2b405a9363e0e3ff"
             }
           ]
         },
@@ -6316,48 +6316,20 @@
     "benchmark_reproducibility": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
-      "commit": "24bea607a2b16e766bc8f2bc8483f22fae1edc61",
+      "commit": "ef0c82e8acf09ee401c6086f59623c3ef1287761",
       "git_status": {
         "available": true,
-        "dirty": true,
-        "changed_file_count": 37,
-        "generated_dirty": true,
-        "generated_changed_file_count": 36,
-        "source_dirty": true,
-        "source_changed_file_count": 1,
-        "sample": [
-          " M SKILL.md",
-          " M registry/index.json",
-          " M registry/packages/yao-meta-skill.json",
-          " M reports/adaptation_proposals.json",
-          " M reports/adaptation_proposals.md",
-          " M reports/adoption_drift_report.json",
-          " M reports/benchmark_reproducibility.json",
-          " M reports/benchmark_reproducibility.md",
-          " M reports/compiled_targets.json",
-          " M reports/context_budget.json",
-          " M reports/context_budget.md",
-          " M reports/context_budget_summary.json"
-        ],
-        "source_sample": [
-          " M SKILL.md"
-        ],
-        "generated_sample": [
-          " M registry/index.json",
-          " M registry/packages/yao-meta-skill.json",
-          " M reports/adaptation_proposals.json",
-          " M reports/adaptation_proposals.md",
-          " M reports/adoption_drift_report.json",
-          " M reports/benchmark_reproducibility.json",
-          " M reports/benchmark_reproducibility.md",
-          " M reports/compiled_targets.json",
-          " M reports/context_budget.json",
-          " M reports/context_budget.md",
-          " M reports/context_budget_summary.json",
-          " M reports/evidence_consistency.json"
-        ],
+        "dirty": false,
+        "changed_file_count": 0,
+        "generated_dirty": false,
+        "generated_changed_file_count": 0,
+        "source_dirty": false,
+        "source_changed_file_count": 0,
+        "sample": [],
+        "source_sample": [],
+        "generated_sample": [],
         "generated_dirty_prefixes": [
           "dist/",
           "registry/index.json",
@@ -6370,13 +6342,13 @@
       },
       "summary": {
         "reproducibility_ready": true,
-        "release_lock_ready": false,
+        "release_lock_ready": true,
         "methodology_complete": true,
         "required_artifact_count": 25,
         "missing_artifact_count": 0,
-        "evidence_bundle_sha256": "6c95043c2d8513102b37bc70a01647246933c84e8a27c2748cc2cae20e040158",
-        "source_contract_sha256": "db71157184dc649ee72dfcaf399204d44a366d942393d055571e0137d42c9f7c",
-        "archive_sha256": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7",
+        "evidence_bundle_sha256": "c297ab1a774434898a9711dc65a49f422cad5cd90e054b6c84ac7c92ee21f850",
+        "source_contract_sha256": "4a7954098cf0f49eca67f55cd0794fe88a068c7eb3bd0fce2b405a9363e0e3ff",
+        "archive_sha256": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773",
         "output_case_count": 5,
         "failure_disclosure_count": 3,
         "command_count": 23,
@@ -6393,24 +6365,22 @@
         "world_class_source_check_count": 19,
         "world_class_source_pass_count": 12,
         "world_class_source_blocked_count": 7,
-        "beta_test_ready": false,
-        "beta_test_blocker_count": 1,
+        "beta_test_ready": true,
+        "beta_test_blocker_count": 0,
         "beta_test_deferred_evidence_count": 4,
         "public_claim_ready": false,
-        "public_claim_blocker_count": 4,
-        "working_tree_dirty": true,
-        "changed_file_count": 37,
-        "source_tree_dirty": true,
-        "source_changed_file_count": 1,
-        "generated_tree_dirty": true,
-        "generated_changed_file_count": 36
+        "public_claim_blocker_count": 3,
+        "working_tree_dirty": false,
+        "changed_file_count": 0,
+        "source_tree_dirty": false,
+        "source_changed_file_count": 0,
+        "generated_tree_dirty": false,
+        "generated_changed_file_count": 0
       },
       "beta_test_release": {
-        "ready": false,
+        "ready": true,
         "scope": "beta/public test release without superiority, fully-reviewed, or world-class claims",
-        "blockers": [
-          "release lock is not clean or commit is unavailable"
-        ],
+        "blockers": [],
         "allowed_deferred_evidence": [
           {
             "key": "provider-holdout",
@@ -6440,7 +6410,6 @@
         "ready": false,
         "scope": "public benchmark or world-class readiness claim",
         "blockers": [
-          "release lock is not clean or commit is unavailable",
           "human blind-review adjudication is incomplete",
           "world-class evidence is not accepted yet (3 open gaps, 4 ledger pending)",
           "world-class source checks are not all accepted (12/19 pass, 7 blocked)"
@@ -6448,12 +6417,12 @@
         "policy": "Local reproducibility can pass before public claims; public claims require provider evidence, human adjudication, clean release lock, accepted world-class evidence, and complete source checks."
       },
       "release_lock": {
-        "ready": false,
-        "commit": "24bea607a2b16e766bc8f2bc8483f22fae1edc61",
+        "ready": true,
+        "commit": "ef0c82e8acf09ee401c6086f59623c3ef1287761",
         "status_scope": "generation-time status before this report is written",
-        "source_changed_file_count": 1,
-        "generated_changed_file_count": 36,
-        "reason": "source files were dirty at generation time"
+        "source_changed_file_count": 0,
+        "generated_changed_file_count": 0,
+        "reason": "clean source tree at generation-time HEAD"
       },
       "evidence_bundle": {
         "algorithm": "sha256(path,label,exists,artifact_sha256)",
@@ -6461,7 +6430,7 @@
         "existing_count": 25,
         "missing_count": 0,
         "missing_paths": [],
-        "sha256": "6c95043c2d8513102b37bc70a01647246933c84e8a27c2748cc2cae20e040158"
+        "sha256": "c297ab1a774434898a9711dc65a49f422cad5cd90e054b6c84ac7c92ee21f850"
       },
       "methodology": {
         "path": "reports/benchmark_methodology.md",
@@ -6570,7 +6539,7 @@
           "path": "reports/security_trust_report.json",
           "exists": true,
           "bytes": 139090,
-          "sha256": "108aee597a1f245f73d9b69454b6fa8a144545f905231a7c314364c7066541c6"
+          "sha256": "65e5a30afaabd5aedb327bfa3be5a808792b946e654f4b6f4c18d68aa2fae7f7"
         },
         {
           "label": "python_compatibility",
@@ -6584,21 +6553,21 @@
           "path": "reports/registry_audit.json",
           "exists": true,
           "bytes": 3155,
-          "sha256": "d307675d5c6c3cd2f104ce7d963b37d36113f35334e4c6895b55fbb8b255e915"
+          "sha256": "c67e6061bf9b0c86d04f0b511462a279f27827c29b91a285650ca9a4e56c003c"
         },
         {
           "label": "package_verification",
           "path": "reports/package_verification.json",
           "exists": true,
           "bytes": 19525,
-          "sha256": "e2ad726ce0486be0f57d88e518ef4d265479a04756419c6f8df50cf7d05b1f14"
+          "sha256": "faf85515c8552a88ad99d93bbbfbf7f1a1feaa4b01f75e04d6e5ecb92c7f250a"
         },
         {
           "label": "install_simulation",
           "path": "reports/install_simulation.json",
           "exists": true,
-          "bytes": 8947,
-          "sha256": "65adf51d8c4b1d5ea49edde09004f7e4bfc06127e640baf2de23af695fbe0728"
+          "bytes": 8793,
+          "sha256": "ed95c78ad4fb313caeebbfc016c3de1f3632cd6deab1f65f2b4c57a61c3c0605"
         },
         {
           "label": "skill_os2_audit",
@@ -6612,21 +6581,21 @@
           "path": "reports/world_class_evidence_plan.json",
           "exists": true,
           "bytes": 23314,
-          "sha256": "483ed2b3bd020fa2c5a888300c0d0c1a265eebaf648076581f082f2d527d3669"
+          "sha256": "3f84676acc733486571c8a356f8c46797ad83694758991ae45aaa6b2be12fd2a"
         },
         {
           "label": "world_class_evidence_ledger",
           "path": "reports/world_class_evidence_ledger.json",
           "exists": true,
           "bytes": 26274,
-          "sha256": "b19e7113ec463dbb1cfb87c45d3c51624151aeea1747c8d9c286b6967a385c6a"
+          "sha256": "70172a5933ef533a953f3d22b9f2b9b7d5b6b052a27745d6fc4079a6e8803023"
         },
         {
           "label": "world_class_evidence_intake",
           "path": "reports/world_class_evidence_intake.json",
           "exists": true,
           "bytes": 20922,
-          "sha256": "885bff9c1c8546c606f583a982a2283229438dbdcd44f3c7e55aff71f858f8f4"
+          "sha256": "7015921b7b0d1dd830cfd865d4e7b821fc7b9f1e774dc2e010ba03864a7c0438"
         },
         {
           "label": "world_class_evidence_preflight",
@@ -6640,21 +6609,21 @@
           "path": "reports/world_class_submission_review.json",
           "exists": true,
           "bytes": 17292,
-          "sha256": "e8df5c72ade7ad0704b6ee5dd6aedefea98f79a9a370cd4d80655401862e87f4"
+          "sha256": "3547f05019b30a9766626246498c7823eb877fda8e703468c138b678e586754a"
         },
         {
           "label": "world_class_operator_runbook",
           "path": "reports/world_class_operator_runbook.json",
           "exists": true,
           "bytes": 83712,
-          "sha256": "bb67813244d64f8e5e416620bb9d7856d95d85a1ec7f9581b2a97b9fed47e02e"
+          "sha256": "76d3899ae1f031a44723b4f823a7f7b50f430f9fddb07029f4177cba5281e6e4"
         },
         {
           "label": "world_class_operator_runbook_markdown",
           "path": "reports/world_class_operator_runbook.md",
           "exists": true,
           "bytes": 25504,
-          "sha256": "e8d4dee7541323f0e6fa6be4903e7c482b1d00ef1db5594f0c44212088b53d85"
+          "sha256": "922c09b02c264e4851a4c22ee5b4ac7873561921e76ec5a040313f7e4ac3a5e0"
         },
         {
           "label": "world_class_operator_runbook_html",
@@ -6667,8 +6636,8 @@
           "label": "world_class_claim_guard",
           "path": "reports/world_class_claim_guard.json",
           "exists": true,
-          "bytes": 20713,
-          "sha256": "911ba833055ab857250f88d88ccdd0bb652076a81214f725c49d763352035572"
+          "bytes": 21092,
+          "sha256": "312fc85450846ac94008b11f0a4d01d323a7e905260bc471b6ce92d2c0a1d699"
         }
       ],
       "missing_artifacts": [],
@@ -6809,7 +6778,7 @@
     "skill_os2_coverage": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "summary": {
         "item_count": 21,
@@ -7557,11 +7526,11 @@
               "exists": true
             },
             {
-              "path": "reports/skillops/daily/2026-07-02.json",
+              "path": "reports/skillops/daily/2026-07-16.json",
               "exists": true
             },
             {
-              "path": "reports/skillops/daily/2026-07-02.md",
+              "path": "reports/skillops/daily/2026-07-16.md",
               "exists": true
             }
           ],
@@ -7584,11 +7553,11 @@
               "exists": true
             },
             {
-              "path": "reports/skillops/weekly/2026-W27.json",
+              "path": "reports/skillops/weekly/2026-W29.json",
               "exists": true
             },
             {
-              "path": "reports/skillops/weekly/2026-W27.md",
+              "path": "reports/skillops/weekly/2026-W29.md",
               "exists": true
             }
           ],
@@ -13041,7 +13010,7 @@
         "interactive_script_count": 0,
         "package_hash_scope": "source-contract-without-generated-reports",
         "package_hash_file_count": 247,
-        "package_sha256": "db71157184dc649ee72dfcaf399204d44a366d942393d055571e0137d42c9f7c"
+        "package_sha256": "4a7954098cf0f49eca67f55cd0794fe88a068c7eb3bd0fce2b405a9363e0e3ff"
       },
       "failures": [],
       "warnings": [],
@@ -18128,6 +18097,14 @@
           "recommendation": "Break broad integration assertions into focused verifier helpers when the next behavior change lands."
         },
         {
+          "path": "scripts/build_skill_atlas.py",
+          "lines": 591,
+          "kind": "cli-script",
+          "severity": "pass",
+          "early_watch": false,
+          "recommendation": "Watch this file before adding new responsibilities; extract a helper module when one concern dominates."
+        },
+        {
           "path": "scripts/render_skill_overview.py",
           "lines": 588,
           "kind": "cli-script",
@@ -18142,14 +18119,6 @@
           "severity": "pass",
           "early_watch": false,
           "recommendation": "Break broad integration assertions into focused verifier helpers when the next behavior change lands."
-        },
-        {
-          "path": "scripts/build_skill_atlas.py",
-          "lines": 586,
-          "kind": "cli-script",
-          "severity": "pass",
-          "early_watch": false,
-          "recommendation": "Watch this file before adding new responsibilities; extract a helper module when one concern dominates."
         },
         {
           "path": "scripts/optimize_description.py",
@@ -18234,15 +18203,15 @@
         "context_budget_tier": "production",
         "context_budget_limit": 1000,
         "skill_body_tokens": 794,
-        "other_text_tokens": 1200569,
+        "other_text_tokens": 1201394,
         "estimated_initial_load_tokens": 987,
-        "estimated_total_text_tokens": 1201363,
-        "deferred_resource_tokens": 531767,
+        "estimated_total_text_tokens": 1202188,
+        "deferred_resource_tokens": 531896,
         "deferred_resource_warn_threshold": 120000,
         "deferred_resource_dirs": [
           {
             "path": "scripts",
-            "estimated_tokens": 469568,
+            "estimated_tokens": 469693,
             "file_count": 155
           },
           {
@@ -18252,7 +18221,7 @@
           },
           {
             "path": "evals",
-            "estimated_tokens": 22731,
+            "estimated_tokens": 22735,
             "file_count": 27
           },
           {
@@ -18264,7 +18233,7 @@
         "large_deferred_resource_dirs": [
           {
             "path": "scripts",
-            "estimated_tokens": 469568,
+            "estimated_tokens": 469693,
             "file_count": 155
           }
         ],
@@ -18287,14 +18256,14 @@
               ],
               "missing": [],
               "path": "scripts",
-              "estimated_tokens": 469568,
+              "estimated_tokens": 469693,
               "file_count": 155,
               "rationale": "Script resources are deterministic deferred tools, not initial-load prompt context."
             }
           ],
           "summary": "Large deferred resources are indexed and backed by evidence."
         },
-        "relevant_file_count": 591,
+        "relevant_file_count": 476,
         "unused_resource_dirs": [],
         "quality_signal_points": 140,
         "quality_density": 141.8
@@ -20131,7 +20100,7 @@
     "adoption_drift": {
       "ok": true,
       "schema_version": "2.0",
-      "generated_at": "2026-07-02T06:33:44Z",
+      "generated_at": "2026-07-16T14:27:41Z",
       "skill_dir": ".",
       "privacy_contract": {
         "storage": "local-first",
@@ -20215,7 +20184,7 @@
     "daily_skillops": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02T06:33:07Z",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "decision": "proposal-review",
       "source_supplied": false,
@@ -20228,7 +20197,7 @@
       "local_blueprint_ready": true,
       "public_world_class_ready": false,
       "world_class_pending_count": 4,
-      "release_lock_ready": false,
+      "release_lock_ready": true,
       "evidence_consistency_ok": true,
       "writes_source_files": false,
       "auto_patch_enabled": false,
@@ -20245,7 +20214,7 @@
         "local_blueprint_ready": true,
         "public_world_class_ready": false,
         "world_class_pending_count": 4,
-        "release_lock_ready": false,
+        "release_lock_ready": true,
         "evidence_consistency_ok": true,
         "writes_source_files": false,
         "auto_patch_enabled": false,
@@ -20694,7 +20663,7 @@
         "local_blueprint_ready": true,
         "public_world_class_ready": false,
         "world_class_pending_count": 4,
-        "release_lock_ready": false,
+        "release_lock_ready": true,
         "evidence_consistency_ok": true
       },
       "actions": [
@@ -20721,20 +20690,20 @@
         "benchmark_reproducibility": "reports/benchmark_reproducibility.json"
       },
       "artifacts": {
-        "json": "reports/skillops/daily/2026-07-02.json",
-        "markdown": "reports/skillops/daily/2026-07-02.md"
+        "json": "reports/skillops/daily/2026-07-16.json",
+        "markdown": "reports/skillops/daily/2026-07-16.md"
       },
-      "source_path": "reports/skillops/daily/2026-07-02.json"
+      "source_path": "reports/skillops/daily/2026-07-16.json"
     },
     "weekly_curator": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02T06:33:07Z",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "decision": "curator-review",
-      "week_id": "2026-W27",
-      "daily_report_count": 5,
-      "opportunity_count": 25,
+      "week_id": "2026-W29",
+      "daily_report_count": 6,
+      "opportunity_count": 30,
       "unique_opportunity_count": 5,
       "ready_for_approval_review_count": 1,
       "proposal_review_count": 4,
@@ -20743,7 +20712,7 @@
       "top_score": 88,
       "skill_count": 11,
       "actionable_portfolio_issue_count": 0,
-      "release_lock_ready": false,
+      "release_lock_ready": true,
       "evidence_consistency_ok": true,
       "public_world_class_ready": false,
       "world_class_pending_count": 4,
@@ -20752,9 +20721,9 @@
       "failure_count": 0,
       "summary": {
         "decision": "curator-review",
-        "week_id": "2026-W27",
-        "daily_report_count": 5,
-        "opportunity_count": 25,
+        "week_id": "2026-W29",
+        "daily_report_count": 6,
+        "opportunity_count": 30,
         "unique_opportunity_count": 5,
         "ready_for_approval_review_count": 1,
         "proposal_review_count": 4,
@@ -20763,7 +20732,7 @@
         "top_score": 88,
         "skill_count": 11,
         "actionable_portfolio_issue_count": 0,
-        "release_lock_ready": false,
+        "release_lock_ready": true,
         "evidence_consistency_ok": true,
         "public_world_class_ready": false,
         "world_class_pending_count": 4,
@@ -20821,7 +20790,8 @@
         "reports/skillops/daily/2026-06-17.json",
         "reports/skillops/daily/2026-06-20.json",
         "reports/skillops/daily/2026-06-21.json",
-        "reports/skillops/daily/2026-07-02.json"
+        "reports/skillops/daily/2026-07-02.json",
+        "reports/skillops/daily/2026-07-16.json"
       ],
       "opportunity_summary": {
         "action_type_counts": {
@@ -21019,7 +20989,7 @@
         "no_route_opportunity_count": 0
       },
       "release_state": {
-        "release_lock_ready": false,
+        "release_lock_ready": true,
         "evidence_consistency_ok": true,
         "public_world_class_ready": false,
         "world_class_pending_count": 4
@@ -21045,10 +21015,10 @@
         "world_class_ledger": "reports/world_class_evidence_ledger.json"
       },
       "artifacts": {
-        "json": "reports/skillops/weekly/2026-W27.json",
-        "markdown": "reports/skillops/weekly/2026-W27.md"
+        "json": "reports/skillops/weekly/2026-W29.json",
+        "markdown": "reports/skillops/weekly/2026-W29.md"
       },
-      "source_path": "reports/skillops/weekly/2026-W27.json"
+      "source_path": "reports/skillops/weekly/2026-W29.json"
     },
     "review_waivers": {
       "schema_version": "1.0",
@@ -21197,7 +21167,7 @@
     "adaptation_proposals": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02T06:33:07Z",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "source_patterns": "reports/user_patterns.json",
       "pattern_count": 5,
@@ -21595,7 +21565,7 @@
     "world_class_evidence_ledger": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "decision": "evidence-pending",
       "ready_to_claim_world_class": false,
@@ -22197,7 +22167,7 @@
     "world_class_evidence_intake": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "summary": {
         "schema_present": true,
@@ -22595,7 +22565,7 @@
     "world_class_evidence_preflight": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "summary": {
         "evidence_item_count": 4,
@@ -24573,7 +24543,7 @@
     "world_class_submission_review": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "decision": "awaiting-submissions",
       "ready_to_claim_world_class": false,
@@ -25015,7 +24985,7 @@
     "world_class_operator_runbook": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "summary": {
         "evidence_item_count": 4,
@@ -26706,14 +26676,14 @@
     "world_class_claim_guard": {
       "schema_version": "1.0",
       "ok": true,
-      "generated_at": "2026-07-02",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "summary": {
         "ledger_ready_to_claim_world_class": false,
         "ledger_pending_count": 4,
-        "claim_surface_count": 201,
-        "json_claim_surface_count": 97,
-        "metadata_claim_surface_count": 98,
+        "claim_surface_count": 205,
+        "json_claim_surface_count": 99,
+        "metadata_claim_surface_count": 100,
         "package_claim_surface_count": 17,
         "violation_count": 0,
         "overclaim_guard_active": true,
@@ -27404,6 +27374,14 @@
           "violation_count": 0
         },
         {
+          "path": "reports/skillops/daily/2026-07-16.json",
+          "violation_count": 0
+        },
+        {
+          "path": "reports/skillops/daily/2026-07-16.md",
+          "violation_count": 0
+        },
+        {
           "path": "reports/skillops/weekly/2026-W25.json",
           "violation_count": 0
         },
@@ -27417,6 +27395,14 @@
         },
         {
           "path": "reports/skillops/weekly/2026-W27.md",
+          "violation_count": 0
+        },
+        {
+          "path": "reports/skillops/weekly/2026-W29.json",
+          "violation_count": 0
+        },
+        {
+          "path": "reports/skillops/weekly/2026-W29.md",
           "violation_count": 0
         },
         {
@@ -27585,8 +27571,8 @@
         "trust_level": "local",
         "license": "MIT",
         "checksums": {
-          "package_sha256": "db71157184dc649ee72dfcaf399204d44a366d942393d055571e0137d42c9f7c",
-          "archive_sha256": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7"
+          "package_sha256": "4a7954098cf0f49eca67f55cd0794fe88a068c7eb3bd0fce2b405a9363e0e3ff",
+          "archive_sha256": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773"
         },
         "compatibility": {
           "openai": "pass",
@@ -27617,16 +27603,16 @@
         },
         "distribution": {
           "archive_verified": true,
-          "archive_sha256": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7",
+          "archive_sha256": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773",
           "package_verification": "reports/package_verification.json",
           "install_simulated": true,
           "install_simulation": "reports/install_simulation.json"
         },
-        "generated_at": "2026-06-13"
+        "generated_at": "2026-07-16"
       },
       "index": {
         "schema_version": "2.0",
-        "generated_at": "2026-06-13",
+        "generated_at": "2026-07-16",
         "package_count": 1,
         "packages": [
           {
@@ -27642,7 +27628,7 @@
               "vscode"
             ],
             "package_metadata": "registry/packages/yao-meta-skill.json",
-            "package_sha256": "db71157184dc649ee72dfcaf399204d44a366d942393d055571e0137d42c9f7c"
+            "package_sha256": "4a7954098cf0f49eca67f55cd0794fe88a068c7eb3bd0fce2b405a9363e0e3ff"
           }
         ]
       },
@@ -27658,15 +27644,15 @@
     "package_verification": {
       "ok": true,
       "schema_version": "2.0",
-      "generated_at": "2026-06-21",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
       "package_dir": "dist",
       "summary": {
         "target_count": 4,
         "adapter_count": 4,
         "archive_present": true,
-        "archive_sha256": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7",
-        "archive_entry_count": 580,
+        "archive_sha256": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773",
+        "archive_entry_count": 612,
         "nested_skill_entry_count": 0,
         "failure_count": 0,
         "warning_count": 0
@@ -28330,14 +28316,14 @@
     "install_simulation": {
       "ok": true,
       "schema_version": "2.0",
-      "generated_at": "2026-06-13",
+      "generated_at": "2026-07-16",
       "skill_dir": ".",
-      "package_dir": "tests/tmp_review_studio/dist",
-      "install_root": "tests/tmp_review_studio/install-root/simulate-yao-meta-skill",
-      "installed_skill_dir": "tests/tmp_review_studio/install-root/simulate-yao-meta-skill/yao-meta-skill",
+      "package_dir": "dist",
+      "install_root": "dist/install-simulation/simulate-yao-meta-skill",
+      "installed_skill_dir": "dist/install-simulation/simulate-yao-meta-skill/yao-meta-skill",
       "summary": {
         "archive_present": true,
-        "archive_entry_count": 598,
+        "archive_entry_count": 612,
         "nested_skill_entry_count": 0,
         "archive_extracted": true,
         "entrypoint_loaded": true,
@@ -28356,7 +28342,7 @@
         {
           "id": "archive-present",
           "status": "pass",
-          "detail": "Package archive exists: tests/tmp_review_studio/dist/yao-meta-skill.zip"
+          "detail": "Package archive exists: dist/yao-meta-skill.zip"
         },
         {
           "id": "archive-safe-paths",
@@ -28607,16 +28593,16 @@
       "failures": [],
       "warnings": [],
       "artifacts": {
-        "archive": "tests/tmp_review_studio/dist/yao-meta-skill.zip",
-        "package_manifest": "tests/tmp_review_studio/dist/manifest.json",
-        "json": "tests/tmp_review_studio/install_simulation.json",
-        "markdown": "tests/tmp_review_studio/install_simulation.md"
+        "archive": "dist/yao-meta-skill.zip",
+        "package_manifest": "dist/manifest.json",
+        "json": "reports/install_simulation.json",
+        "markdown": "reports/install_simulation.md"
       }
     },
     "upgrade_check": {
       "ok": true,
       "schema_version": "2.0",
-      "generated_at": "2026-06-13",
+      "generated_at": "2026-07-16",
       "previous": {
         "name": "yao-meta-skill",
         "version": "1.0.0",
@@ -28685,12 +28671,12 @@
           {
             "field": "archive_sha256",
             "from": "",
-            "to": "c56a8519244c0bc8ec17c92d4641c832629cc059f4b51fe177a2c039515253a7"
+            "to": "f19c4c9b82688a27fea31cbd09ce5f48322229ae3e2ac54d86996142d36f5773"
           },
           {
             "field": "package_sha256",
             "from": "0000000000000000000000000000000000000000000000000000000000000000",
-            "to": "db71157184dc649ee72dfcaf399204d44a366d942393d055571e0137d42c9f7c"
+            "to": "4a7954098cf0f49eca67f55cd0794fe88a068c7eb3bd0fce2b405a9363e0e3ff"
           }
         ]
       },
@@ -28705,8 +28691,8 @@
       "artifacts": {
         "previous_package": "registry/examples/yao-meta-skill-1.0.0.json",
         "current_package": "reports/registry_audit.json",
-        "json": "tests/tmp_review_studio/upgrade_check.json",
-        "markdown": "tests/tmp_review_studio/upgrade_check.md"
+        "json": "reports/upgrade_check.json",
+        "markdown": "reports/upgrade_check.md"
       }
     },
     "manifest": {

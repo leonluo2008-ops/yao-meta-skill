@@ -13,6 +13,7 @@ IGNORED_RELATIVE_DIRS = {
 }
 PACKAGE_PATHS = (
     "SKILL.md",
+    "SKILL.example.md",
     "manifest.json",
     "agents",
     "references",
@@ -63,7 +64,7 @@ def read_text(path: Path) -> str:
 
 def classify(path: Path) -> str:
     parts = set(path.parts)
-    if path == Path("SKILL.md"):
+    if path in {Path("SKILL.md"), Path("SKILL.example.md")}:
         return "skill_body"
     if "agents" in parts:
         return "interface"
@@ -122,7 +123,7 @@ def summarize(skill_dir: Path) -> dict:
         }
         files.append(record)
         total_tokens += tokens
-        if rel == Path("SKILL.md") or (rel.parts and rel.parts[0] == "agents"):
+        if kind == "skill_body" or (rel.parts and rel.parts[0] == "agents"):
             initial_tokens += tokens
     return {
         "skill_dir": str(skill_dir),

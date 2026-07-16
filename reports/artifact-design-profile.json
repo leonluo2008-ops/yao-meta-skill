@@ -1,5 +1,5 @@
 {
-  "skill_name": "yao-meta-skill-trigger-coverage-merge",
+  "skill_name": "yao-meta-skill-pr13-merge",
   "design_system": "metric editorial",
   "primary_artifact": {
     "key": "dashboard",

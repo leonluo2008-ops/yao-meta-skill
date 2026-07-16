@@ -45,7 +45,7 @@
 
 ## Artifact Paths
 
-- skill: `examples/governed-incident-command/generated-skill/SKILL.md`
+- skill: `examples/governed-incident-command/generated-skill/SKILL.example.md`
 - optimization_report: `examples/governed-incident-command/optimization/reports/description_optimization.json`
 - promotion_decisions: `reports/promotion_decisions.json`
 - candidate_registry: `reports/candidate_registry.json`

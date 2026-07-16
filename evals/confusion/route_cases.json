@@ -9,13 +9,13 @@
     },
     {
       "name": "team-frontend-review",
-      "description_file": "examples/team-frontend-review/generated-skill/SKILL.md",
+      "description_file": "examples/team-frontend-review/generated-skill/SKILL.example.md",
       "semantic_config": "examples/team-frontend-review/optimization/semantic_config.json",
       "threshold": 0.48
     },
     {
       "name": "governed-incident-command",
-      "description_file": "examples/governed-incident-command/generated-skill/SKILL.md",
+      "description_file": "examples/governed-incident-command/generated-skill/SKILL.example.md",
       "semantic_config": "examples/governed-incident-command/optimization/semantic_config.json",
       "threshold": 0.48
     }

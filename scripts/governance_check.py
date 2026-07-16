@@ -122,6 +122,10 @@ def main() -> None:
     root = Path(args.skill_dir).resolve()
     manifest_path = root / "manifest.json"
     skill_md = root / "SKILL.md"
+    if not skill_md.exists():
+        skill_md = root / "SKILL.example.md"
+    if not skill_md.exists():
+        skill_md = root / "SKILL.fixture.md"
     failures = []
     warnings = []
     details = {"skill_dir": str(root), "manifest_present": manifest_path.exists()}

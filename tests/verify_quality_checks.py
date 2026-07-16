@@ -200,6 +200,29 @@ def verify_volatile_report_outputs_ignored() -> dict:
     }
 
 
+def verify_example_entrypoint_initial_load() -> dict:
+    with TemporaryDirectory(prefix="yao-example-entrypoint-") as temp_dir:
+        skill_dir = Path(temp_dir) / "skill"
+        (skill_dir / "agents").mkdir(parents=True)
+        (skill_dir / "SKILL.example.md").write_text("x" * 8004, encoding="utf-8")
+        (skill_dir / "agents" / "interface.yaml").write_text("display_name: Example\n", encoding="utf-8")
+        case = run(
+            "example_entrypoint_initial_load",
+            [sys.executable, "scripts/context_sizer.py", str(skill_dir), "--json"],
+        )
+
+    payload = case.get("payload", {})
+    files = payload.get("files", [])
+    entrypoint = next((item for item in files if item.get("path") == "SKILL.example.md"), {})
+    case["passed"] = (
+        case["passed"]
+        and entrypoint.get("kind") == "skill_body"
+        and payload.get("estimated_initial_load_tokens") == payload.get("estimated_total_text_tokens")
+        and payload.get("warning") is True
+    )
+    return case
+
+
 def main() -> None:
     python = sys.executable
     cases = []
@@ -265,6 +288,7 @@ def main() -> None:
     cases.insert(5, governed_resource)
     cases.append(verify_private_report_ignored())
     cases.append(verify_volatile_report_outputs_ignored())
+    cases.append(verify_example_entrypoint_initial_load())
 
     report = {"ok": all(case["passed"] for case in cases), "cases": cases}
     print(json.dumps(report, ensure_ascii=False, indent=2))

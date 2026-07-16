@@ -1,5 +1,5 @@
 {
-  "skill_name": "yao-meta-skill-trigger-coverage-merge",
+  "skill_name": "yao-meta-skill-pr13-merge",
   "relevance": "prompt-aware",
   "primary_task_family": {
     "key": "execution_operation",

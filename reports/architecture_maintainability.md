@@ -53,9 +53,9 @@ No near-threshold files found.
 | `scripts/render_evidence_consistency.py` | `676` | `cli-script` | `pass` |
 | `scripts/render_world_class_operator_runbook.py` | `651` | `cli-script` | `pass` |
 | `tests/verify_output_review_adjudication.py` | `599` | `test` | `pass` |
+| `scripts/build_skill_atlas.py` | `591` | `cli-script` | `pass` |
 | `scripts/render_skill_overview.py` | `588` | `cli-script` | `pass` |
 | `tests/verify_world_class_evidence_ledger.py` | `587` | `test` | `pass` |
-| `scripts/build_skill_atlas.py` | `586` | `cli-script` | `pass` |
 | `scripts/optimize_description.py` | `585` | `cli-script` | `pass` |
 | `scripts/trust_check.py` | `582` | `cli-script` | `pass` |
 

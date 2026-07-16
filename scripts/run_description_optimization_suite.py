@@ -27,7 +27,7 @@ TARGETS = [
     {
         "name": "team-frontend-review",
         "title": "Frontend Review Description Optimization",
-        "description_file": ROOT / "examples" / "team-frontend-review" / "generated-skill" / "SKILL.md",
+        "description_file": ROOT / "examples" / "team-frontend-review" / "generated-skill" / "SKILL.example.md",
         "baseline_file": ROOT / "examples" / "team-frontend-review" / "optimization" / "baseline_description.txt",
         "dev_cases": ROOT / "examples" / "team-frontend-review" / "optimization" / "dev" / "trigger_cases.json",
         "holdout_cases": ROOT / "examples" / "team-frontend-review" / "optimization" / "holdout" / "trigger_cases.json",
@@ -40,7 +40,7 @@ TARGETS = [
     {
         "name": "governed-incident-command",
         "title": "Governed Incident Description Optimization",
-        "description_file": ROOT / "examples" / "governed-incident-command" / "generated-skill" / "SKILL.md",
+        "description_file": ROOT / "examples" / "governed-incident-command" / "generated-skill" / "SKILL.example.md",
         "baseline_file": ROOT / "examples" / "governed-incident-command" / "optimization" / "baseline_description.txt",
         "dev_cases": ROOT / "examples" / "governed-incident-command" / "optimization" / "dev" / "trigger_cases.json",
         "holdout_cases": ROOT / "examples" / "governed-incident-command" / "optimization" / "holdout" / "trigger_cases.json",

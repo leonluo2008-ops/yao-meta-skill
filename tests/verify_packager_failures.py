@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import json
+import shutil
 import subprocess
 import sys
 from pathlib import Path
@@ -9,6 +10,16 @@ ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = ROOT / "scripts" / "cross_packager.py"
 EXPECTATIONS = ROOT / "evals" / "packaging_expectations.json"
 TMP = ROOT / "tests" / "tmp"
+
+
+def materialize_fixture(name: str) -> Path:
+    source = ROOT / "tests" / "fixtures" / name
+    target = TMP / "fixtures" / name
+    if target.exists():
+        shutil.rmtree(target)
+    shutil.copytree(source, target)
+    (target / "SKILL.fixture.md").rename(target / "SKILL.md")
+    return target
 
 
 def run_case(name: str, cmd: list[str], expected_substring: str) -> dict:
@@ -40,7 +51,7 @@ def main() -> None:
             [
                 sys.executable,
                 str(SCRIPT),
-                str(ROOT / "tests" / "fixtures" / "package_missing_interface_field"),
+                str(materialize_fixture("package_missing_interface_field")),
                 "--platform",
                 "openai",
                 "--expectations",
@@ -55,7 +66,7 @@ def main() -> None:
             [
                 sys.executable,
                 str(SCRIPT),
-                str(ROOT / "tests" / "fixtures" / "package_invalid_yaml"),
+                str(materialize_fixture("package_invalid_yaml")),
                 "--platform",
                 "openai",
                 "--expectations",

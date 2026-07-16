@@ -1,6 +1,6 @@
 # Skill OS 2.0 Blueprint Coverage
 
-Generated at: `2026-07-02`
+Generated at: `2026-07-16`
 
 ## Summary
 
@@ -235,12 +235,12 @@ These extension tracks come from the user-supplied 2.0 reference plan. They are 
 
 - objective: Daily operations layer summarizes explicit-source conversation patterns, proposal-only adaptation work, approval state, release locks, and world-class evidence gaps.
 - status: `covered`
-- existing evidence: `scripts/render_daily_skillops_report.py`, `tests/verify_daily_skillops.py`, `reports/skillops/daily/2026-07-02.json`, `reports/skillops/daily/2026-07-02.md`
+- existing evidence: `scripts/render_daily_skillops_report.py`, `tests/verify_daily_skillops.py`, `reports/skillops/daily/2026-07-16.json`, `reports/skillops/daily/2026-07-16.md`
 - next action: Keep Daily SkillOps report aligned with proposal, approval, coverage, and world-class ledger contracts as the operations layer evolves.
 
 ### Weekly Curator Report
 
 - objective: Weekly curator layer aggregates Daily SkillOps opportunities, Skill Atlas portfolio signals, release locks, and world-class evidence gaps into a maintenance queue.
 - status: `covered`
-- existing evidence: `scripts/render_weekly_curator_report.py`, `tests/verify_weekly_curator.py`, `reports/skillops/weekly/2026-W27.json`, `reports/skillops/weekly/2026-W27.md`
+- existing evidence: `scripts/render_weekly_curator_report.py`, `tests/verify_weekly_curator.py`, `reports/skillops/weekly/2026-W29.json`, `reports/skillops/weekly/2026-W29.md`
 - next action: Use weekly curator output as the Skill Librarian maintenance queue before approving any durable skill-library changes.
