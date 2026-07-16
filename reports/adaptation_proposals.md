@@ -1,6 +1,6 @@
 # Adaptation Proposals
 
-- Generated at: `2026-07-16T14:27:20Z`
+- Generated at: `2026-07-16`
 - Pattern report: `reports/user_patterns.json`
 - Proposal only: `true`
 - Writes repository files: `false`
