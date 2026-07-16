@@ -19,8 +19,8 @@ OPTIMIZATION_REPORTS = {
 
 SKILL_PATHS = {
     "yao-meta-skill": ROOT / "SKILL.md",
-    "team-frontend-review": ROOT / "examples" / "team-frontend-review" / "generated-skill" / "SKILL.md",
-    "governed-incident-command": ROOT / "examples" / "governed-incident-command" / "generated-skill" / "SKILL.md",
+    "team-frontend-review": ROOT / "examples" / "team-frontend-review" / "generated-skill" / "SKILL.example.md",
+    "governed-incident-command": ROOT / "examples" / "governed-incident-command" / "generated-skill" / "SKILL.example.md",
 }
 
 

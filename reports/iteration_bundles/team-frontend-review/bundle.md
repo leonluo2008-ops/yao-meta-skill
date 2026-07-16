@@ -43,7 +43,7 @@
 
 ## Artifact Paths
 
-- skill: `examples/team-frontend-review/generated-skill/SKILL.md`
+- skill: `examples/team-frontend-review/generated-skill/SKILL.example.md`
 - optimization_report: `examples/team-frontend-review/optimization/reports/description_optimization.json`
 - promotion_decisions: `reports/promotion_decisions.json`
 - candidate_registry: `reports/candidate_registry.json`

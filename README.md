@@ -304,6 +304,7 @@ That active install writes to `~/.agents/skills/yao-meta-skill` and can make Cod
 Keep this repository focused on the meta-skill factory.
 
 - Put reusable factory examples in `examples/`.
+- Name embedded example entrypoints `SKILL.example.md`; reserve the exact `SKILL.md` filename for the installable root skill so recursive agent discovery does not activate examples or test fixtures.
 - Put reusable benchmark evidence, regression results, and release evidence in `reports/`.
 - Keep private analysis reports, customer-specific outputs, and one-off generated business skills outside this repository unless they are intentionally promoted into an example or regression fixture.
 - Place real generated skills as sibling skill directories under the local skill workspace, not as top-level folders inside `yao-meta-skill`.

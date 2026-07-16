@@ -21,7 +21,7 @@ CASES = [
     },
     {
         "name": "team_frontend_review",
-        "description_file": ROOT / "examples" / "team-frontend-review" / "generated-skill" / "SKILL.md",
+        "description_file": ROOT / "examples" / "team-frontend-review" / "generated-skill" / "SKILL.example.md",
         "baseline_description_file": ROOT / "examples" / "team-frontend-review" / "optimization" / "baseline_description.txt",
         "semantic_config": ROOT / "examples" / "team-frontend-review" / "optimization" / "semantic_config.json",
         "dev_cases": ROOT / "examples" / "team-frontend-review" / "optimization" / "dev" / "trigger_cases.json",
@@ -31,7 +31,7 @@ CASES = [
     },
     {
         "name": "governed_incident_command",
-        "description_file": ROOT / "examples" / "governed-incident-command" / "generated-skill" / "SKILL.md",
+        "description_file": ROOT / "examples" / "governed-incident-command" / "generated-skill" / "SKILL.example.md",
         "baseline_description_file": ROOT / "examples" / "governed-incident-command" / "optimization" / "baseline_description.txt",
         "semantic_config": ROOT / "examples" / "governed-incident-command" / "optimization" / "semantic_config.json",
         "dev_cases": ROOT / "examples" / "governed-incident-command" / "optimization" / "dev" / "trigger_cases.json",

@@ -1,5 +1,7 @@
 # Examples
 
+Example packages use `SKILL.example.md` instead of `SKILL.md`. Git-based installers copy the whole root skill directory, and some agents recursively discover every nested `SKILL.md`; the non-discoverable filename keeps examples from becoming active skills after installation. Rename it to `SKILL.md` after copying an example into its own standalone skill directory.
+
 This directory shows complete examples from raw workflow input to final skill package shape.
 
 It is organized in three tiers:

@@ -37,6 +37,7 @@ IGNORED_FILE_PATTERNS = {
 }
 CANONICAL_PATHS = (
     "SKILL.md",
+    "SKILL.example.md",
     "manifest.json",
     "agents",
     "references",
@@ -255,6 +256,8 @@ def analyze_skill(
     warn_skill_body_tokens: int | None = None,
 ) -> dict:
     skill_md = root / "SKILL.md"
+    if not skill_md.exists():
+        skill_md = root / "SKILL.example.md"
     failures = []
     warnings = []
     manifest = load_manifest(root / "manifest.json")
@@ -278,7 +281,7 @@ def analyze_skill(
         total_text_tokens += tokens
         rel = path.relative_to(root)
         top_dir = rel.parts[0] if rel.parts else str(rel)
-        if rel == Path("SKILL.md"):
+        if rel in {Path("SKILL.md"), Path("SKILL.example.md")}:
             skill_body_tokens += tokens
             initial_load_tokens += tokens
         else:

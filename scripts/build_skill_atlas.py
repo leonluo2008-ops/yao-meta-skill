@@ -118,14 +118,18 @@ def should_skip(path: Path, root: Path) -> bool:
     return len(rel.parts) >= 2 and rel.parts[0] == "tests" and rel.parts[1].startswith("tmp")
 
 
-def find_skill_dirs(workspace_root: Path) -> list[Path]:
+def find_skill_files(workspace_root: Path) -> list[Path]:
     workspace_root = workspace_root.resolve()
-    skill_dirs = []
-    for skill_md in sorted(workspace_root.rglob("SKILL.md")):
+    skill_files = []
+    for skill_md in sorted(
+        path
+        for pattern in ("SKILL.md", "SKILL.example.md", "SKILL.fixture.md")
+        for path in workspace_root.rglob(pattern)
+    ):
         if should_skip(skill_md, workspace_root):
             continue
-        skill_dirs.append(skill_md.parent)
-    return skill_dirs
+        skill_files.append(skill_md)
+    return skill_files
 
 
 def tokens(text: str) -> set[str]:
@@ -193,8 +197,9 @@ def resource_names(skill_dir: Path) -> list[str]:
     return names
 
 
-def collect_skill(workspace_root: Path, skill_dir: Path, policy: dict[str, Any]) -> dict[str, Any]:
-    frontmatter, _ = parse_frontmatter(skill_dir / "SKILL.md")
+def collect_skill(workspace_root: Path, skill_md: Path, policy: dict[str, Any]) -> dict[str, Any]:
+    skill_dir = skill_md.parent
+    frontmatter, _ = parse_frontmatter(skill_md)
     manifest = load_json(skill_dir / "manifest.json")
     name = str(frontmatter.get("name") or manifest.get("name") or skill_dir.name)
     description = str(frontmatter.get("description") or "")
@@ -467,13 +472,13 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
 def build_atlas(workspace_root: Path, output_dir: Path, report_html: Path, report_json: Path, threshold: float, today: date) -> dict[str, Any]:
     workspace_root = workspace_root.resolve()
     scope_policy = load_scope_policy(workspace_root)
-    skill_dirs = find_skill_dirs(workspace_root)
+    skill_files = find_skill_files(workspace_root)
     skills = []
     drift_signals: list[dict[str, Any]] = []
     telemetry_report_count = 0
-    for skill_dir in skill_dirs:
-        skill = collect_skill(workspace_root, skill_dir, scope_policy)
-        telemetry, signals = load_telemetry_profile(workspace_root, skill_dir, skill)
+    for skill_md in skill_files:
+        skill = collect_skill(workspace_root, skill_md, scope_policy)
+        telemetry, signals = load_telemetry_profile(workspace_root, skill_md.parent, skill)
         skill["telemetry"] = telemetry
         telemetry_report_count += 1 if telemetry["report_present"] else 0
         drift_signals.extend(signals)

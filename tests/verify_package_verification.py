@@ -76,6 +76,17 @@ def verify_package(out_dir: Path, output_json: Path, output_md: Path, skill_root
 
 
 def main() -> None:
+    source_skill_entries = []
+    for path in ROOT.rglob("SKILL.md"):
+        relative = path.relative_to(ROOT)
+        if relative.parts[0] in {".git", "dist"}:
+            continue
+        if len(relative.parts) >= 2 and relative.parts[0] == "tests" and relative.parts[1].startswith("tmp"):
+            continue
+        source_skill_entries.append(relative)
+    source_skill_entries.sort()
+    assert source_skill_entries == [Path("SKILL.md")], source_skill_entries
+
     if TMP.exists():
         shutil.rmtree(TMP)
     TMP.mkdir(parents=True, exist_ok=True)
