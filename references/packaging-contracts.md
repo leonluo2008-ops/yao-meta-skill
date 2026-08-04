@@ -7,6 +7,7 @@
 - `openai`
 - `claude`
 - `generic`
+- `openwork` — requires `.claude-plugin/plugin.json` + `skills/<name>/SKILL.md` directory structure (see [OpenWork Plugin Compatibility](openwork-plugin-compat.md))
 
 ## Contract Shape
 
