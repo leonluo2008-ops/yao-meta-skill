@@ -1,6 +1,6 @@
 ---
 name: yao-meta-skill
-description: Create/improve/evaluate agent skills from workflows, prompts, SOPs, scripts. Use for migration/release/package, routing, evals/tests, install checks, 优化已有 skill, 补 trigger 评测. Exclude no-skill summary/translation/docs.
+description: "Skill governance OS: atlas, IR, trust gates, packaging."
 metadata:
   author: Yao Team
 ---
@@ -25,6 +25,7 @@ metadata:
 3. Scan up to `3-5` references: external, user, local; skip tiny edits; surface only uncertainty/conflict.
 4. Write `description` early; route/boundary edits need `trigger_eval.py`; releases need risk-matched gates before folders.
 5. Add output-risk, artifact-design, prompt-quality, system-model, next directions only when earned.
+6. **Publishing to GitHub for OpenWork import**: add `.claude-plugin/plugin.json` + `skills/<name>/` directory before push (see [OpenWork Plugin Compatibility](references/openwork-plugin-compat.md)).
 
 Playbooks: [Method](references/skill-engineering-method.md), [Intent](references/intent-dialogue.md), [Skill IR](references/skill-ir-method.md), [Output Eval](references/output-eval-method.md), [Review Studio](references/review-studio-method.md).
 
@@ -50,4 +51,4 @@ Create/refactor/package: produce `SKILL.md`, aligned `agents/interface.yaml`, ju
 
 ## Reference Map
 
-Primary: [Method](references/skill-engineering-method.md), [Artifact Design](references/artifact-design-doctrine.md), [Systems](references/systems-thinking-doctrine.md), [Governance](references/governance.md), [SkillOps](references/skillops-decision-policy.md).
+Primary: [Method](references/skill-engineering-method.md), [Artifact Design](references/artifact-design-doctrine.md), [Systems](references/systems-thinking-doctrine.md), [Governance](references/governance.md), [SkillOps](references/skillops-decision-policy.md), [OpenWork Compat](references/openwork-plugin-compat.md).
